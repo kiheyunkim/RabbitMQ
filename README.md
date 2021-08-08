@@ -24,13 +24,13 @@ RabbitMQ는 Erlang으로 AMQP를 구현한 것
 
 ## 용어
 
-Producer: 메세지를 생성하고 발송하는 주체 - Queue에 직접 접근하지않고 항상 Exchange를 통해 접근
+* Producer: 메세지를 생성하고 발송하는 주체 - Queue에 직접 접근하지않고 항상 Exchange를 통해 접근
 
-Consumer: 메세지를 수순하는 주체. - Queue에 직접 접근함.
+* Consumer: 메세지를 수순하는 주체. - Queue에 직접 접근함.
 
-ExChange: Producer들에게서 전달받은 메세지들을 어떤 Queue에 전송할지 결정하는 객체
+* ExChange: Producer들에게서 전달받은 메세지들을 어떤 Queue에 전송할지 결정하는 객체
 
-Binding: Exchange에게 메세지를 라우팅 할 규칙을 지정하는 행위. 조건에 맞는 메세지를 특정 큐에 전송할 수 있도록 할 수 있음(Exchange와 Queue는 m:n binding이 가능)
+* Binding: Exchange에게 메세지를 라우팅 할 규칙을 지정하는 행위. 조건에 맞는 메세지를 특정 큐에 전송할 수 있도록 할 수 있음(Exchange와 Queue는 m:n binding이 가능)
 
 
 ## Exchange의 네가지 타입
