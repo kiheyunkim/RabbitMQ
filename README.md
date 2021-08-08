@@ -9,7 +9,7 @@ docker run -itd --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.9-ma
 
 RabbitMQ는 Erlang으로 AMQP를 구현한 것
 
-#### 메세지 큐
+### 메세지 큐
 
 * 메시지 큐의 종류
 	* RabbitMQ
@@ -18,11 +18,11 @@ RabbitMQ는 Erlang으로 AMQP를 구현한 것
 	* Kafka
 	* 등등
 
-### AMQP?
+## AMQP?
 
 클라이언트가 메시지 미들웨어 브로커가 통신할 수 있게 해주는 메세지 프로토콜
 
-### 용어
+## 용어
 
 Producer: 메세지를 생성하고 발송하는 주체 - Queue에 직접 접근하지않고 항상 Exchange를 통해 접근
 
@@ -33,7 +33,7 @@ ExChange: Producer들에게서 전달받은 메세지들을 어떤 Queue에 전�
 Binding: Exchange에게 메세지를 라우팅 할 규칙을 지정하는 행위. 조건에 맞는 메세지를 특정 큐에 전송할 수 있도록 할 수 있음(Exchange와 Queue는 m:n binding이 가능)
 
 
-### Exchange의 네가지 타입
+## Exchange의 네가지 타입
 
 | 타입  | 특징  | 비고  |
 |---|---|---|
@@ -43,7 +43,7 @@ Binding: Exchange에게 메세지를 라우팅 할 규칙을 지정하는 행위
 |  Fanout |  Broadcast |   해당 Exchange에 등록된 모든 Queue에 메세지 전송|
 
 
-### Message Queue와 Message 보존
+## Message Queue와 Message 보존
 RabbitMQ server가 종료 후 재기동하면, 기본적으로 Queue는 모두 제거됨.
 
 이를 막기 위해서는 Queue를 생성할 떄 Durable 옵션에 true를 주고 생성해야함.
@@ -51,7 +51,7 @@ RabbitMQ server가 종료 후 재기동하면, 기본적으로 Queue는 모두 �
 Producer가 메세지를 발송할 떄, PERSISTENT_TEXT_PLAIN옵션을 주어야 메세지가 보존 됨.
 
 
-### Prefetch Count
+## Prefetch Count
 
 하나의 Queue에 여러 Consumer가 존재할 경우, Queue는 기본적으로 Round-Robin방식으로 메세지 분배
 
