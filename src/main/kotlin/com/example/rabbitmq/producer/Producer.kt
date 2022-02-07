@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody
  * IDE : IntelliJ IDEA
  * Created by kiheyunkim@gmail.com on 2021-08-07
  * Github : http://github.com/kiheyunkim
- * Comment :
+ * Comment : 전송시엔 rabbitTemplate bean을 통해 전송함.
  */
 @Controller
 class Producer(private val rabbitTemplate: RabbitTemplate) {
