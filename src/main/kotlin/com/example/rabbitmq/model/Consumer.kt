@@ -10,7 +10,7 @@ import org.springframework.util.SerializationUtils
  * IDE : IntelliJ IDEA
  * Created by kiheyunkim@gmail.com on 2021-08-07
  * Github : http://github.com/kiheyunkim
- * Comment :
+ * Comment : 각각은 RabbitMQ의 데이터를 수신하는 Listener
  */
 @Component
 class Consumer {
